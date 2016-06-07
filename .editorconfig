@@ -8,9 +8,8 @@ end_of_line = lf
 insert_final_newline = true
 trim_trailing_whitespace = true
 
-[*.py]
-indent_style = space
+[*.md]
+trim_trailing_whitespace = false
 
-[{package.json,*.yml}]
+[{*.py,*.yml,package.json}]
 indent_style = space
-indent size = 2
