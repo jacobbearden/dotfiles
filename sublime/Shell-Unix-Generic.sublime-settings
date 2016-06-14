@@ -1,0 +1,14 @@
+{
+	"extensions":
+	[
+		".aliases",
+		".bash_prompt",
+		".curlrc",
+		".exports",
+		".extra",
+		".functions",
+		".inputrc",
+		".screenrc",
+		".wgetrc"
+	]
+}
