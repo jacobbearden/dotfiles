@@ -1,6 +1,6 @@
 {
 	"bold_folder_labels": true,
-	"color_scheme": "Packages/Theme - Afterglow/Afterglow.tmTheme",
+	"color_scheme": "Packages/gruvbox/gruvbox (Dark) (Hard).tmTheme",
 	"default_encoding": "UTF-8",
 	"default_line_ending": "unix",
 	"ensure_newline_at_eof_on_save": true,
@@ -12,7 +12,7 @@
 		".Trashes",
 		"*.pyc",
 		"Desktop.ini",
-		"Thumbs.db",
+		"Thumbs.db"
 	],
 	"folder_exclude_patterns":
 	[
@@ -21,7 +21,7 @@
 		"node_modules"
 	],
 	"folder_no_icon": true,
-	"font_face": "Source Code Pro",
+	"font_face": "Inconsolata-g",
 	"font_options":
 	[
 		"gray_antialias",
@@ -33,6 +33,7 @@
 	"hot_exit": false,
 	"ignored_packages":
 	[
+		"AngularJS",
 		"Vintage"
 	],
 	"line_padding_bottom": 2,
@@ -49,9 +50,9 @@
 	"show_line_endings": true,
 	"status_bar_brighter": true,
 	"tab_size": 2,
-	"tabs_small": true,
 	"tabs_padding_small": true,
-	"theme": "Afterglow-blue.sublime-theme",
+	"tabs_small": true,
+	"theme": "gruvbox (Dark) (Hard).sublime-theme",
 	"translate_tabs_to_spaces": false,
 	"trim_trailing_white_space_on_save": true,
 	"word_wrap": true
