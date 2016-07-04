@@ -1,0 +1,8 @@
+{
+	"bracket_styles": {
+		"default": {
+			"icon": "none",
+			"style": "thin_underline"
+		}
+	}
+}

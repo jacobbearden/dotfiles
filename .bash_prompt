@@ -10,7 +10,7 @@ esac
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-  # We have color support; assume it's compliant with Ecma-48
+  # we have color support; assume it's compliant with Ecma-48
   # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
   # a case would tend to support setf rather than setaf.)
   color_prompt=yes
@@ -37,9 +37,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# If this is an xterm set more declarative titles
+# if this is an xterm set more declarative titles
 # "dir: last_cmd" and "actual_cmd" during execution
-# If you want to exclude a cmd from being printed see line 156
+# if you want to exclude a cmd from being printed see line 156
 case "$TERM" in
 xterm*|rxvt*)
     PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\$(print_title)\a\]$PS1"
@@ -96,14 +96,14 @@ xterm*|rxvt*)
     ;;
 esac
 
-# Get the Git branch
+# get the git branch
 parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
-# Custom bash prompt
+# custom bash prompt
 #
-# Includes custom character for the prompt, path, and Git branch name.
+# includes custom character for the prompt, path, and git branch name.
 #
-# Source: kirsle.net/wizards/ps1.html
+# source: kirsle.net/wizards/ps1.html
 export PS1="\n\[$(tput bold)\]\[$(tput setaf 5)\]➜ \[$(tput setaf 6)\]\w\[$(tput setaf 3)\]\$(parse_git_branch) \[$(tput sgr0)\]"

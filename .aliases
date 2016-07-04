@@ -1,41 +1,37 @@
-# Listing
+# listing
 alias ls='ls --color=auto -h --group-directories-first'
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
-# Color grep output by default
+# color grep output by default
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
-# Shortcuts
+# shortcuts
 alias vi='vim'
 alias g='git'
 alias h='history'
 
-# Server guick starts
-alias ps='python -m SimpleHTTPServer 4000'
+# server guick starts
 alias js='jekyll serve --drafts'
 
-# Maintain wget connection by default
+# maintain wget connection by default
 alias wget='wget -c'
 
-# Get weather through http://wttr.in
-alias weather='curl wttr.in'
-
-# Get week number
+# get week number
 alias week='date +%V'
 
-# Stopwatch
+# stopwatch
 alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
 
-# Enable aliases to be sudo'ed
+# enable aliases to be sudo'ed
 alias sudo='sudo '
 
-# Add an "alert" alias for long running commands.  Use like so:
+# add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-# Reload config
+# reload config
 alias resource='source ~/.bash_profile && echo "OK"'

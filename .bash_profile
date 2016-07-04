@@ -1,19 +1,19 @@
-# If not running interactively, don't do anything
+# if not running interactively, don't do anything
 case $- in
     *i*) ;;
       *) return;;
 esac
 
-# Case-insensitive globbing (used in pathname expansion)
+# case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob;
 
-# Append to the Bash history file, rather than overwriting it
+# append to the Bash history file, rather than overwriting it
 shopt -s histappend;
 
-# Autocorrect typos in path names when using `cd`
+# autocorrect typos in path names when using `cd`
 shopt -s cdspell;
 
-# If set, the pattern "**" used in a pathname expansion context will
+# ff set, the pattern "**" used in a pathname expansion context will
 # match all files and zero or more directories and subdirectories.
 #shopt -s globstar
 
@@ -25,7 +25,7 @@ if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
-# Load the shell dotfiles, and then some:
+# load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
 for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
@@ -33,9 +33,9 @@ for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
 done;
 unset file;
 
-# Load RVM into a shell session *as a function*
+# load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
-# Load NVM into a shell session
+# load NVM into a shell session
 export NVM_DIR="/home/`whoami`/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"

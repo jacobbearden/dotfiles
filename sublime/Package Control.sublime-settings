@@ -1,0 +1,33 @@
+{
+	"installed_packages":
+	[
+		"AdvancedNewFile",
+		"Alignment",
+		"AutoFileName",
+		"Boxy Theme",
+		"Boxy Theme Addon - Font Face",
+		"BracketHighlighter",
+		"Case Conversion",
+		"Color Highlighter",
+		"ColorHelper",
+		"DocBlockr",
+		"EditorConfig",
+		"Emmet",
+		"Git",
+		"Git-StatusBar",
+		"GitGutter",
+		"HTML Nest Comments",
+		"HTML5",
+		"Inc-Dec-Value",
+		"Markdown Extended",
+		"Markdown Preview",
+		"Package Control",
+		"Random Everything",
+		"RegReplace",
+		"Sass",
+		"SideBarEnhancements",
+		"SublimeCodeIntel",
+		"SummitLinter",
+		"SwapStrings"
+	]
+}
