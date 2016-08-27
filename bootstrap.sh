@@ -5,11 +5,8 @@ cd "$(dirname "${BASH_SOURCE}")";
 git pull origin master;
 
 function doIt() {
-	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude "sublime/" \
-		--exclude "README.md" -avh --no-perms . ~;
+	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude "readme.md" -avh --no-perms . ~;
 	source ~/.bash_profile;
-
-	cp -f sublime/* ~/.config/sublime-text-3/Packages/User/
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
