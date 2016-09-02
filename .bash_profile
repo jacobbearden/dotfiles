@@ -35,7 +35,3 @@ unset file;
 
 # load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
-# load NVM into a shell session
-export NVM_DIR="/home/`whoami`/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"

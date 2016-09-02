@@ -13,25 +13,33 @@ alias egrep='egrep --color=auto'
 alias vi='vim'
 alias g='git'
 alias h='history'
+alias unzip='dtrx'
 
-# server guick starts
-alias js='jekyll serve --drafts'
-
-# maintain wget connection by default
+# defaults
+alias mv='mv -v'
+alias rm='rm -i -v'
+alias cp='cp -v'
+alias mkdir='mkdir -p'
 alias wget='wget -c'
-
-# get week number
-alias week='date +%V'
-
-# stopwatch
-alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
 
 # enable aliases to be sudo'ed
 alias sudo='sudo '
 
 # add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+alias alert='notify-send -u low -i "$([ $? = 0 ] && echo terminal || echo error)" "$USER@$HOSTNAME" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+# IP addresses
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="ipconfig getifaddr en0"
+alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
+
+# View HTTP traffic
+alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
+alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
 
 # reload config
 alias resource='source ~/.bash_profile && echo "OK"'
+
+# server guick starts
+alias js='jekyll serve --drafts'
