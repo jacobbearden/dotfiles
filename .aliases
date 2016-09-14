@@ -43,3 +43,6 @@ alias resource='source ~/.bash_profile && echo "OK"'
 
 # server guick starts
 alias js='jekyll serve --drafts'
+
+# edit hosts
+alias hosts='sudo vim /etc/hosts'
