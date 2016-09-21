@@ -22,7 +22,7 @@ abbrev_path() {
 }
 
 parse_git_branch() {
-	branch="$(git branch 2>/dev/null | grep "*" | cut -d " " -f 2)"
+	branch="$(git branch 2>/dev/null | grep '*' | cut -d ' ' -f 2)"
 	if [[ -z "$branch" ]]; then
 		return
 	else
