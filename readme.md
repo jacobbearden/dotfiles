@@ -7,7 +7,7 @@
 ```bash
 git clone git@github.com:jacobbearden/dotfiles.git
 cd dotfiles
-./bootstrap.sh
+make
 ```
 
 
