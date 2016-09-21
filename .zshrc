@@ -6,8 +6,8 @@ setopt PROMPT_SUBST
 autoload -U colors && colors
 autoload -Uz compinit && compinit
 
-zstyle ':completion:*' menu select
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+zstyle ":completion:*" menu select
+zstyle ":completion:*" matcher-list "m:{a-zA-Z}={A-Za-z}"
 
 precmd() {
 	print ""
@@ -22,7 +22,7 @@ abbrev_path() {
 }
 
 parse_git_branch() {
-	branch="$(git branch 2>/dev/null | grep '*' | cut -d ' ' -f 2)"
+	branch="$(git branch 2>/dev/null | grep "*" | cut -d " " -f 2)"
 	if [[ -z "$branch" ]]; then
 		return
 	else
@@ -36,6 +36,6 @@ parse_git_branch() {
 	echo " ($branch%{$reset_color%})"
 }
 
-export PS1='$(prompt_char)$(abbrev_path)$(parse_git_branch) $ '
+export PS1="$(prompt_char)$(abbrev_path)$(parse_git_branch) $ "
 
 source $HOME/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
