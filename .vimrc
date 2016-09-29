@@ -22,12 +22,6 @@ Plug 'editorconfig/editorconfig-vim'
 
 call plug#end()
 
-for prefix in ['i', 'n', 'v']
-  for key in ['<Up>', '<Down>', '<Left>', '<Right>']
-    exe prefix . "noremap " . key . " <Nop>"
-  endfor
-endfor
-
 let g:tmux_navigator_no_mappings = 1
 
 nnoremap <silent> <c-h> :TmuxNavigateLeft<cr>
@@ -42,18 +36,5 @@ nnoremap <space> :nohl<cr>
 
 nnoremap H gT
 nnoremap L gt
-
-set background=light
-
-function! NumberToggle()
-  set number
-
-  if(&relativenumber == 1)
-    set norelativenumber
-  else
-    set relativenumber
-  endif
-endfunction
-noremap <C-n> :call NumberToggle()<CR>
 
 set timeoutlen=1000 ttimeoutlen=0
