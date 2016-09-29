@@ -14,11 +14,13 @@ precmd() {
 }
 
 prompt_char() {
-	echo "%{$fg[green]%}→%{$reset_color%} "
+	echo "%{$fg[blue]%}→%{$reset_color%} "
 }
 
 abbrev_path() {
-	echo "%(5~|%-1~/…/%3~|%4~)"
+	path="%(5~|%-1~/…/%3~|%4~)"
+
+  echo "%{$fg[magenta]%}$path%{$reset_color%} "
 }
 
 parse_git_branch() {
@@ -33,9 +35,9 @@ parse_git_branch() {
     branch="$branch%{$fg[yellow]%}*"
   fi
 
-  echo " ($branch%{$reset_color%})"
+  echo "($branch%{$reset_color%}) "
 }
 
-export PS1='$(prompt_char)$(abbrev_path)$(parse_git_branch) $ '
+export PS1='$(prompt_char)$(abbrev_path)$(parse_git_branch)$ '
 
 source $HOME/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
