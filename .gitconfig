@@ -46,8 +46,6 @@
 	attributesfile = ~/.gitattributes
 
 	whitespace = space-before-tab,-indent-with-non-tab,trailing-space
-
-	pager = "diff-so-fancy | less --tabs=2 -RFX"
 [apply]
 	whitespace = fix
 [github]
