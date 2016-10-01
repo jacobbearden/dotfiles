@@ -14,6 +14,8 @@ set lazyredraw
 set ttyfast
 syntax on
 
+hi LineNr cterm=bold ctermfg=black
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'airblade/vim-gitgutter'
