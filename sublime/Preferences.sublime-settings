@@ -12,7 +12,7 @@
 		".Trashes",
 		"*.pyc",
 		"Desktop.ini",
-		"Thumbs.db",
+		"Thumbs.db"
 	],
 	"folder_exclude_patterns":
 	[
