@@ -12,4 +12,8 @@ alias unzip=dtrx
 
 alias resource="source $HOME/.zshrc"
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+export RVM_DIR="/home/jacob/.rvm"
+[[ -s "$RVM_DIR/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+export NVM_DIR="/home/jacob/.nvm"
+[[ -s "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh"
