@@ -16,7 +16,7 @@ prompt_char() {
 abbrev_path() {
 	path="%(5~|%-1~/…/%3~|%4~)"
 
-  echo "%{$fg[magenta]%}$path%{$reset_color%} "
+	echo "%{$fg[magenta]%}$path%{$reset_color%} "
 }
 
 parse_git_branch() {
