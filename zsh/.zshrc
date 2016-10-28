@@ -1,5 +1,6 @@
 #!/bin/zsh
 source $HOME/.bash_profile
+source $HOME/.variables
 
 setopt PROMPT_SUBST
 
