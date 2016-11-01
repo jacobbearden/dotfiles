@@ -1,6 +1,7 @@
 [user]
 	name = Jacob Bearden
-	email = jacob.bearden0@gmail.com
+	email = jacob@bearden.io
+	signingkey = 5462A9F7
 [alias]
 	st = status
 	a = add
