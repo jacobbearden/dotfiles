@@ -38,6 +38,6 @@ git_branch() {
   echo "($branch%{$reset_color%})"
 }
 
-export PS1="$(user)$(abbrev_path) $(git_branch)$ "
+export PS1='$(user)$(abbrev_path) $(git_branch)$ '
 
 source $HOME/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
