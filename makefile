@@ -1,14 +1,17 @@
 DOTFILES_ROOT := $(shell pwd)
 SUBLIME_ROOT := ${HOME}/.config/sublime-text-3/Packages/User
 
-all: bash zsh git vim atom editorconfig
-.PHONY: bash zsh git vim atom editorconfig
+all: bash zsh bin git vim atom editorconfig
+.PHONY: bash zsh bin git vim atom editorconfig
 
 bash:
 	ln -fs $(DOTFILES_ROOT)/bash/.bash_profile ${HOME}/.bash_profile
 
 zsh:
 	ln -fs $(DOTFILES_ROOT)/zsh/.zshrc ${HOME}/.zshrc
+
+bin:
+	[ ! -h ${HOME}/.bin ] && ln -fs $(DOTFILES_ROOT)/bin ${HOME}/.bin || true
 
 git:
 	ln -fs $(DOTFILES_ROOT)/git/.gitconfig ${HOME}/.gitconfig
