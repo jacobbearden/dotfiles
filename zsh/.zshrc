@@ -14,13 +14,13 @@ user() {
   name="%n"
   host="%m"
 
-	echo "%{$fg[green]%}$name@$host:%{$reset_color%}"
+	echo "%{$fg[green]%}$name@$host%{$reset_color%}:"
 }
 
 abbrev_path() {
 	path="%(5~|%-1~/…/%3~|%4~)"
 
-	echo "%{$fg[blue]%}$path%{$reset_color%}"
+	echo "%{$fg[magenta]%}$path%{$reset_color%}"
 }
 
 git_branch() {
