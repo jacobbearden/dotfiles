@@ -1,0 +1,24 @@
+"*":
+  core:
+    disabledPackages: [
+      "background-tips"
+      "exception-reporting"
+      "metrics"
+      "welcome"
+      "whitespace"
+    ]
+  editor:
+    fontFamily: "Droid Sans Mono"
+    showIndentGuide: true
+    showInvisibles: true
+    zoomFontWhenCtrlScrolling: false
+  "file-icons":
+    coloured: false
+  "linter-eslint":
+    useGlobalEslint: true
+  minimap:
+    plugins:
+      cursorline: true
+      cursorlineDecorationsZIndex: 0
+  "tree-view":
+    hideIgnoredNames: true
