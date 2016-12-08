@@ -25,6 +25,7 @@ tmux:
 
 atom:
 	ln -fs ${DOTFILES_ROOT}/atom/config.cson ${HOME}/.atom/config.cson
+	ln -fs ${DOTFILES_ROOT}/atom/packages.cson ${HOME}/.atom/packages.cson
 
 editorconfig:
 	ln -fs $(DOTFILES_ROOT)/editorconfig/.editorconfig ${HOME}/.editorconfig

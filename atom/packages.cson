@@ -1,0 +1,15 @@
+packages: [
+  "editorconfig"
+  "emmet"
+  "file-icons"
+  "highlight-selected"
+  "language-latex"
+  "less-than-slash"
+  "linter"
+  "linter-eslint"
+  "linter-xo"
+  "minimap"
+  "minimap-cursorline"
+  "package-sync"
+  "pigments"
+]
