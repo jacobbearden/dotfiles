@@ -14,8 +14,6 @@
     zoomFontWhenCtrlScrolling: false
   "file-icons":
     coloured: false
-  "linter-eslint":
-    useGlobalEslint: true
   minimap:
     plugins:
       cursorline: true
