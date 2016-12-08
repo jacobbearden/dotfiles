@@ -4,6 +4,9 @@
 #
 # Generate a gist either from the clipboard, or by piping, or using a filename
 # and then immediately get a git.io url for it and stick it on the clipboard
+#
+# USAGE:
+#   $ gist <file>
 
 main() {
 	if [ -t 0 ]; then

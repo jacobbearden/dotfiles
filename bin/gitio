@@ -3,6 +3,9 @@
 # gitio
 #
 # Shorten URLs using https://git.io
+#
+# USAGE:
+#   $ gitio <url>
 
 main() {
 	local url = "$1";
