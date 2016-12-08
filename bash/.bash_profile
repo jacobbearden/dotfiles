@@ -18,5 +18,3 @@ export RVM_DIR="/home/jacob/.rvm"
 
 export NVM_DIR="/home/jacob/.nvm"
 [[ -s "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh"
-
-alias resource="source $HOME/.zshrc"
