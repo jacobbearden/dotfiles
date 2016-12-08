@@ -3,7 +3,7 @@ export EDITOR="$(which vim)"
 export PATH="$PATH:$HOME/.bin"
 
 alias g=git
-alias ls="ls -G"
+alias ls="ls -GLp --group-directories-first"
 alias a=atom
 alias v=vim
 
