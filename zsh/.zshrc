@@ -10,17 +10,10 @@ autoload -Uz compinit && compinit
 zstyle ":completion:*" menu select
 zstyle ":completion:*" matcher-list "m:{a-zA-Z}={A-Za-z}"
 
-user() {
-  name="%n"
-  host="%m"
-
-	echo "%{$fg[green]%}$name@$host%{$reset_color%}:"
-}
-
 abbrev_path() {
 	path="%(5~|%-1~/…/%3~|%4~)"
 
-	echo "%{$fg[magenta]%}$path%{$reset_color%}"
+	echo "%{$fg[blue]%}$path%{$reset_color%}"
 }
 
 git_branch() {
@@ -38,6 +31,6 @@ git_branch() {
   echo "($branch%{$reset_color%})"
 }
 
-export PS1='$(user)$(abbrev_path) $(git_branch)$ '
+export PS1='$(abbrev_path) $(git_branch) $ '
 
 source $HOME/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

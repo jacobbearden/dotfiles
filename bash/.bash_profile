@@ -1,11 +1,15 @@
 export EDITOR="$(which vim)"
+alias e="$EDITOR"
+
+function d() {
+	e $@ .
+}
 
 export PATH="$PATH:$HOME/.bin"
 
 alias g=git
 alias ls="ls -GLp --group-directories-first"
 alias a=atom
-alias v=vim
 
 alias unzip=dtrx
 

@@ -18,6 +18,8 @@ git:
 	ln -fs $(DOTFILES_ROOT)/git/.gitattributes ${HOME}/.gitattributes
 
 vim:
+	[ ! -L ${HOME}/.vim ] && ln -Ffs $(DOTFILES_ROOT)/vim/ ${HOME}/.vim || true
+	$(DOTFILES_ROOT)/vim/script/update_pack jacobbearden
 	ln -fs $(DOTFILES_ROOT)/vim/.vimrc ${HOME}/.vimrc
 
 tmux:
@@ -26,6 +28,7 @@ tmux:
 atom:
 	ln -fs ${DOTFILES_ROOT}/atom/config.cson ${HOME}/.atom/config.cson
 	ln -fs ${DOTFILES_ROOT}/atom/packages.cson ${HOME}/.atom/packages.cson
+	apm install package-sync
 
 editorconfig:
 	ln -fs $(DOTFILES_ROOT)/editorconfig/.editorconfig ${HOME}/.editorconfig
