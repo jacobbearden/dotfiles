@@ -140,6 +140,7 @@ match ErrorMsg '\s\+$'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" 5.a) Colorscheme
 set background=light
+hi LineNr cterm=bold ctermfg=black
 
 "" 5.b) Relative/absolute number switch with <C-n>
 function! NumberToggle()
