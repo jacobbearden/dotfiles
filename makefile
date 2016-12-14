@@ -23,6 +23,8 @@ vim:
 	ln -fs $(DOTFILES_ROOT)/vim/.vimrc ${HOME}/.vimrc
 
 tmux:
+	mkdir -p ${HOME}/.tmux/plugins
+	ln -fs $(DOTFILES_ROOT)/tmux/tpm ${HOME}/.tmux/plugins/
 	ln -fs ${DOTFILES_ROOT}/tmux/.tmux.conf ${HOME}/.tmux.conf
 
 atom:
