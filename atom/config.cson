@@ -8,7 +8,7 @@
       "whitespace"
     ]
   editor:
-    fontFamily: "Droid Sans Mono"
+    fontFamily: "Fira Code"
     showIndentGuide: true
     showInvisibles: true
     zoomFontWhenCtrlScrolling: false
