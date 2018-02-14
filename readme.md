@@ -1,19 +1,17 @@
 # dotfiles
 
-> My shell, git, and other config files.
+> personal machine configuration
 
 
-## Install
+## about
+
+these are my `dotfiles`, they may not be useful to you, but they're useful to me!
+
+
+## install
+
 ```bash
 git clone git@github.com:jacobbearden/dotfiles.git
 cd dotfiles
 make
 ```
-
-
-## Contribute
-Suggestions/improvements [welcome](//github.com/jacobbearden/dotfiles/issues)!
-
-
-## License
-MIT © [Jacob Bearden](//bearden.io)
