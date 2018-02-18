@@ -1,0 +1,46 @@
+[user]
+  name = Jacob Bearden
+  email = jacob@bearden.io
+  signingkey = 26DB6E17DA5E8731
+[alias]
+  st = status
+  a = add
+  aa = add --all
+  ci = commit
+  br = branch
+  co = checkout
+  coi = checkout-interactive
+  cop = checkout-pr
+  di = diff
+  lb = checkout -
+  up = pull --rebase --autostash
+
+  tags = tag -l
+  branches = branch -a
+  remotes = remote -v
+
+  amend = commit --amend --reuse-message=HEAD
+  recent = log --pretty=oneline -n 20 --graph --abbrev-commit
+  go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
+[push]
+  default = current
+  followTags = true
+[pull]
+  default = current
+[branch]
+  autosetuprebase = always
+[core]
+  excludesfile = ~/.gitignore
+[credential]
+  helper = osxkeychain
+[diff]
+  compactionHeuristic = true
+[github]
+  user = jacobbearden
+[gpg]
+  program = gpg
+[sendemail]
+  from = Jacob Bearden <jacob@bearden.io>
+  smtpserver = "/usr/local/bin/msmtp"
+  smtpserveroption = "-a"
+  smtpserveroption = "bearden.io"
