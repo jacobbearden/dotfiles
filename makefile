@@ -1,7 +1,15 @@
 DOTFILES_ROOT := $(shell pwd)
 
-all: bash zsh brew bin git vim editorconfig
-.PHONY: bash zsh brew bin git vim editorconfig
+all: bash zsh brew bin git vim editorconfig vscode
+.PHONY: bash zsh brew bin git vim editorconfig vscode
+
+bash:
+	ln -fs $(DOTFILES_ROOT)/bash/.bash_profile ${HOME}/.bash_profile
+
+zsh:
+	$(call install-if-missing, "zsh")
+	ln -Ffs $(DOTFILES_ROOT)/zsh  ${HOME}/.zsh
+	ln -fs $(DOTFILES_ROOT)/zsh/.zshrc ${HOME}/.zshrc
 
 brew:
 	ln -fs $(DOTFILES_ROOT)/brew/Brewfile ${HOME}/.Brewfile
@@ -22,13 +30,11 @@ vim:
 editorconfig:
 	ln -fs $(DOTFILES_ROOT)/editorconfig/.editorconfig ${HOME}/.editorconfig
 
-zsh:
-	$(call install-if-missing, "zsh")
-	ln -Ffs $(DOTFILES_ROOT)/zsh  ${HOME}/.zsh
-	ln -fs $(DOTFILES_ROOT)/zsh/.zshrc ${HOME}/.zshrc
-
-bash:
-	ln -fs $(DOTFILES_ROOT)/bash/.bash_profile ${HOME}/.bash_profile
+vscode:
+  ln -fs $(DOTFILES_ROOT)/vs-code/settings.json /Users/${USER}/Library/Application\ Support/Code/User/settings.json
+  ln -fs $(DOTFILES_ROOT)/vs-code/keybindings.json /Users/${USER}/Library/Application\ Support/Code/User/keybindings.json
+  ln -fs $(DOTFILES_ROOT)/vs-code/snippets /Users/${USER}/Library/Application\ Support/Code/User
+  cat $(DOTFILES_ROOT)/vs-code/extensions | xargs -L 1 code --install-extension
 
 define install-if-missing
 	@brew list $1 > /dev/null 2>&1 || brew install $1
