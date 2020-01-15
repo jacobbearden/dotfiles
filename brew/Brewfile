@@ -43,3 +43,4 @@ cask 'visual-studio-code'
 cask 'vlc'
 
 cask 'font-fira-code'
+cask 'font-jetbrains-mono'
