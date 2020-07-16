@@ -11,8 +11,15 @@ these are my `dotfiles`, they may not be useful to you, but they're useful to me
 
 ## install
 
+### macOS
+
+Install [Homebrew](https://brew.sh/)
+
 ```bash
 git clone git@github.com:jacobbearden/dotfiles.git
 cd dotfiles
 make
 ```
+
+### Windows
+Install [Chocolatey](https://chocolatey.org/install)
