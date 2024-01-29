@@ -18,6 +18,7 @@ brew 'tree'
 brew 'vim'
 brew 'wget'
 brew 'zsh'
+brew 'rbenv'
 
 cask '1password'
 cask 'adobe-creative-cloud'
