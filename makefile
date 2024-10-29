@@ -1,10 +1,14 @@
 DOTFILES_ROOT := $(shell pwd)
 
+define install-if-missing
+	@brew list $1 > /dev/null 2>&1 || brew install $1
+endef
+
 all: bash zsh brew bin git vim editorconfig vscode
 .PHONY: bash zsh brew bin git vim editorconfig vscode
 
 bash:
-	ln -fs $(DOTFILES_ROOT)/bash/.bash_profile ${HOME}/.bash_profile
+	ln -fs $(DOTFILES_ROOT)/bash/.bashrc ${HOME}/.bashrc
 
 zsh:
 	$(call install-if-missing, "zsh")
@@ -31,11 +35,7 @@ editorconfig:
 	ln -fs $(DOTFILES_ROOT)/editorconfig/.editorconfig ${HOME}/.editorconfig
 
 vscode:
-  ln -fs $(DOTFILES_ROOT)/vs-code/settings.json /Users/${USER}/Library/Application\ Support/Code/User/settings.json
-  ln -fs $(DOTFILES_ROOT)/vs-code/keybindings.json /Users/${USER}/Library/Application\ Support/Code/User/keybindings.json
-  ln -fs $(DOTFILES_ROOT)/vs-code/snippets /Users/${USER}/Library/Application\ Support/Code/User
-  cat $(DOTFILES_ROOT)/vs-code/extensions | xargs -L 1 code --install-extension
-
-define install-if-missing
-	@brew list $1 > /dev/null 2>&1 || brew install $1
-endef
+	ln -fs $(DOTFILES_ROOT)/vs-code/settings.json /Users/${USER}/Library/Application\ Support/Code/User/settings.json
+	ln -fs $(DOTFILES_ROOT)/vs-code/keybindings.json /Users/${USER}/Library/Application\ Support/Code/User/keybindings.json
+	ln -fs $(DOTFILES_ROOT)/vs-code/snippets /Users/${USER}/Library/Application\ Support/Code/User
+	cat $(DOTFILES_ROOT)/vs-code/extensions | xargs -L 1 code --install-extension

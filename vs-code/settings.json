@@ -1,7 +1,7 @@
 {
-  "editor.fontFamily": "JetBrains Mono",
-  "editor.fontLigatures": true,
-  "editor.fontSize": 13,
+  "editor.fontFamily": "Inconsolata",
+  "editor.fontLigatures": false,
+  "editor.fontSize": 15,
   "editor.minimap.enabled": false,
   "editor.renderLineHighlight": "all",
   "editor.renderWhitespace": "selection",
@@ -10,19 +10,17 @@
   ],
   "editor.suggestSelection": "first",
   "editor.tabSize": 2,
-  "telemetry.enableCrashReporter": false,
-  "telemetry.enableTelemetry": false,
+  "telemetry.telemetryLevel": "off",
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.cursorStyle": "underline",
-  "terminal.integrated.fontFamily": "JetBrains Mono",
-  "terminal.integrated.fontSize": 13,
-  "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
-  "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+  "terminal.integrated.fontFamily": "Inconsolata",
+  "terminal.integrated.fontSize": 15,
   "vsicons.dontShowNewVersionMessage": true,
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "workbench.colorCustomizations": {
     "statusBar.background": "#252526"
   },
   "workbench.iconTheme": "vscode-icons",
-  "workbench.startupEditor": "none"
+  "workbench.startupEditor": "none",
+  "explorer.confirmDelete": false,
+  "extensions.ignoreRecommendations": true
 }

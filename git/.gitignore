@@ -1,1 +1,16 @@
+.DS_Store
+*.swp
+.env
+
+# node
 node_modules/
+
+# go
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+go.work
+go.work.sum

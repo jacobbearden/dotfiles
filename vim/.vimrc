@@ -1,0 +1,2 @@
+inoremap jk
+let mapleader = “‘“
