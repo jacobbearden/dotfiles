@@ -22,5 +22,9 @@
   "workbench.iconTheme": "vscode-icons",
   "workbench.startupEditor": "none",
   "explorer.confirmDelete": false,
-  "extensions.ignoreRecommendations": true
+  "extensions.ignoreRecommendations": true,
+  "tabnine.experimentalAutoImports": true,
+  "gitlens.currentLine.enabled": false,
+  "gitlens.hovers.currentLine.over": "line",
+  "gitlens.codeLens.enabled": false
 }
