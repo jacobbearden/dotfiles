@@ -18,6 +18,7 @@ zsh:
 brew:
 	ln -fs $(DOTFILES_ROOT)/brew/Brewfile ${HOME}/.Brewfile
 	brew bundle --global
+	brew link --overwrite ruby --force
 
 bin:
 	[ ! -h ${HOME}/.bin ] && ln -fs $(DOTFILES_ROOT)/bin ${HOME}/.bin || true

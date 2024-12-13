@@ -18,6 +18,7 @@ brew 'vim'
 brew 'watch'
 brew 'wget'
 brew 'zsh'
+brew 'ruby'
 
 cask '1password'
 cask '1password-cli'
